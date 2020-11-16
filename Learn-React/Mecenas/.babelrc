@@ -1,0 +1,26 @@
+{
+  "plugins": [
+    "react-hot-loader/babel", // Enables React code to work with HMR.
+    [
+      "module-resolver", { "root": ["./src"] }
+    ],
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-transform-regenerator",
+    "transform-class-properties",
+  ],
+  "presets": [
+    [ // webpack understands the native import syntax, and uses it for tree shaking
+      "@babel/preset-env", { "modules": false }
+    ],
+    "@babel/preset-react", // Transpile React components to JavaScript
+//    [
+//      "env",
+//      {
+//        "targets": {
+//          "browsers": [ "last 2 versions" ]
+//        }
+//      }
+//    ],
+//    "react"
+  ]
+}

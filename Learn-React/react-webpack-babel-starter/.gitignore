@@ -1,0 +1,5 @@
+.idea/
+.ipynb_checkpoints/
+dist/
+node_modules/
+tests/__coverage__/
