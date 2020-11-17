@@ -5,8 +5,8 @@ import ReactDOM from 'react-dom'
 
 // Setup drizzle
 import drizzleOptions from './drizzleOptions'
-import { Drizzle, generateStore } from "drizzle";
-import { DrizzleContext } from "drizzle-react";
+import { Drizzle, generateStore } from "@drizzle/store";
+import { DrizzleContext } from "@drizzle/react-plugin";
 
 // components
 import App from './App'
@@ -15,7 +15,7 @@ import Registry from './components/registry/Registry'
 import ContentCreatorView from './components/content_creator/ContentCreatorView'
 import BeMecenas from './components/be_mecenas/BeMecenasView'
 import Error404 from './components/404';
-import { LoadingContainer } from 'drizzle-react-components'
+import { LoadingContainer } from '@drizzle/react-components'
 
 import {
   BrowserRouter as Router,

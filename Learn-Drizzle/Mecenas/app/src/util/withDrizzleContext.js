@@ -1,5 +1,5 @@
 import React from "react";
-import { DrizzleContext } from 'drizzle-react'
+import { DrizzleContext } from '@drizzle/react-plugin'
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import LinearProgress from '@material-ui/core/LinearProgress';

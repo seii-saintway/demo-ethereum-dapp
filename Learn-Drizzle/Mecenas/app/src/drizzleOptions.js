@@ -1,5 +1,5 @@
-import Mecenas from './../build/contracts/Mecenas.json'
-import BadgdesLedger from './../build/contracts/BadgesLedger.json'
+import Mecenas from './contracts/Mecenas.json'
+import BadgdesLedger from './contracts/BadgesLedger.json'
 
 const drizzleOptions = {
   web3: {

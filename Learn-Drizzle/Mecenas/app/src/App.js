@@ -4,7 +4,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { withStyles } from '@material-ui/core/styles';
 
 import { lightBlue } from '@material-ui/core/colors';
-import 'typeface-roboto'
+import 'fontsource-roboto'
 
 import Toolbar from './components/Toolbar'
 import Footer from './components/Footer'

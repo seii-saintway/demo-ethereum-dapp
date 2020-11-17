@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { AccountData, ContractData, ContractForm } from 'drizzle-react-components'
+import { AccountData, ContractData, ContractForm } from '@drizzle/react-components'
 import { withStyles } from '@material-ui/core/styles';
 import Divider from '@material-ui/core/Divider';
 import Paper from '@material-ui/core/Paper';

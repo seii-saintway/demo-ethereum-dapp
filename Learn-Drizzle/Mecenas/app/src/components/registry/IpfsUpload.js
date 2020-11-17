@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ipfsAPI from 'ipfs-api/lib/index.js';
+import ipfsAPI from 'ipfs-http-client';
 import defaultAvatar from '../../default_avatar.png'
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
