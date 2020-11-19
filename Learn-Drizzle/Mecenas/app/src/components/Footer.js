@@ -28,17 +28,17 @@ class Footer extends Component {
         
         <Grid item xs={12} sm={6}>
           <Grid container alignItems="center" justify="center" style={{height: '100%'}}>
-            <img src={ConsensysLogoPath} className={classes.consensysLogo}/>
-            <Typography variant="display1" style={{marginLeft: 10, fontSize: '1.6em', color: 'inherit'}}>Consensys Academy 2018</Typography>
+            <img src={ConsensysLogoPath} alt="ConsenSys" className={classes.consensysLogo}/>
+            <Typography variant="display1" style={{marginLeft: 10, fontSize: '1.6em', color: 'inherit'}}>ConsenSys Academy 2018</Typography>
           </Grid>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Grid container justify="center" alignItems="center">
             <div>
-              <Typography className={classes.footerText}>Linkedin: <a target="_blank" href="https://linkedin.com/in/davidcanillasracero">David Canillas Racero</a></Typography>
-              <Typography className={classes.footerText}>Github: <a target="_blank" href="https://github.com/kartojal">@kartojal</a></Typography>
-              <Typography className={classes.footerText}>Twitter: <a target="_blank" href="https://twitter.com/davidaweesome">@davidaweesome</a></Typography>
-              <Typography className={classes.footerText}>Github Repository: <a target="_blank" href="https://github.com/kartojal/mecenas">Mecenas</a></Typography>
+              <Typography className={classes.footerText}>Linkedin: <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/andrew-saintway">Andrew Saintway</a></Typography>
+              <Typography className={classes.footerText}>Github: <a target="_blank" rel="noopener noreferrer" href="https://github.com/seii-saintway">@seii-saintway</a></Typography>
+              <Typography className={classes.footerText}>Twitter: <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/seii_saintway">@seii_saintway</a></Typography>
+              <Typography className={classes.footerText}>Github Repository: <a target="_blank" rel="noopener noreferrer" href="https://github.com/seii-saintway/patronsaint">Patronsaint</a></Typography>
             </div>
           </Grid>
         </Grid>

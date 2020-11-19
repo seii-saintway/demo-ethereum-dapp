@@ -40,9 +40,9 @@ class Tier extends Component {
     errorText: "",
     minimumFee: 0,
   }
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   async componentDidUpdate() {
     const loaded = this.state.loaded;
     if (!loaded) {
@@ -115,7 +115,7 @@ class Tier extends Component {
     const renderTiers = tiers.map((tier, index) => (
       <PureTier index={index.toString()} tier={tier} key={index} action={setTier} currentTier={currentTier} />
     ));
-    const isCustomActive = currentTier == 3;
+    const isCustomActive = currentTier === 3;
     try {
       pledge = !!customPledge && customPledge.length > 0 && customPledge !== "0." && !isNaN(customPledge) ? drizzle.web3.utils.fromWei(customPledge, 'ether') : customPledge;
     } catch(err) {

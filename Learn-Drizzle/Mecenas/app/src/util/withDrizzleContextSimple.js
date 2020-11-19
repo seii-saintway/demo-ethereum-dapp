@@ -18,7 +18,7 @@ export default function withDrizzle (Component) {
                 </div>
               )
             }
-            if (initialized && Object.keys(drizzleState.accounts).length == 0) {
+            if (initialized && Object.keys(drizzleState.accounts).length === 0) {
               return(
                 <div>
                   <p>Can't find any accounts. Unlock your account at Metamask!</p>
@@ -41,4 +41,3 @@ export default function withDrizzle (Component) {
     }
   }
 }
-  

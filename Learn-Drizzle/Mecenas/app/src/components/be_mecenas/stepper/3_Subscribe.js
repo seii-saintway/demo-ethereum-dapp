@@ -75,10 +75,10 @@ class Subscribe extends Component {
       if (drizzleState.transactions[txHash]) {
         transactionStatus = Helpers.capitalize(drizzleState.transactions[txHash].status);
       }
-      if (transactionStatus == "Error") {
+      if (transactionStatus === "Error") {
         transactionError = parseDrizzleError(drizzleState.transactions[txHash].error.message);
       }
-      if (transactionStatus == "Success") {
+      if (transactionStatus === "Success") {
         // TODO:
       }
     }
@@ -101,7 +101,7 @@ class Subscribe extends Component {
           Click the button below to make the Ether deposit and support the content creator:
         </Typography>
         <Grid container alignItems="center">
-          <img src={MetamaskLogoPath} className={classes.logo}/>
+          <img src={MetamaskLogoPath} alt="MetaMask" className={classes.logo}/>
           <Button className={classes.button} variant="contained" color="primary" onClick={this.handlePayment} >
             Make payment with Metamask
           </Button>

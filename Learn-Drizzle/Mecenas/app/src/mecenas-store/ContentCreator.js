@@ -57,7 +57,7 @@ const isFoundByNickname = (drizzleState, pointer) => {
   const mecenasState = drizzleState.contracts.Mecenas;
   if (pointer in mecenasState.getContentCreatorByNickname) {
     const isFound =  !_.hasIn(mecenasState, ["getContentCreatorByNickname", pointer, "error"])
-    return isFound == true ? "found" : "not_found";
+    return isFound === true ? "found" : "not_found";
   }
   return "loading";
 }

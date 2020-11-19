@@ -83,7 +83,7 @@ class Top extends Component {
       isDataLoaded(drizzleState, pointer, 'getContentCreator', 'Mecenas') :
       isDataLoaded(drizzleState, pointer, 'getContentCreatorByNickname', 'Mecenas')
     // Current metamask account same as content creator address
-    const isContentCreator = drizzleState.accounts[0] == address;
+    const isContentCreator = drizzleState.accounts[0] === address;
     // Get content creator data
     const contentCreator = getContentCreator(drizzleState, pointer, isAddress);
     const profileUrl = !!contentCreator.ipfsAvatar.length ? `https://ipfs.io/ipfs/${contentCreator.ipfsAvatar}` : defaultAvatar;
@@ -153,7 +153,7 @@ class Top extends Component {
                   {contentCreator.totalMecenas} backers
                 </Typography>
               </ReactPlaceholder>
-              { loaded == false && <div>backers</div> }
+              { loaded === false && <div>backers</div> }
             </Grid>
             <Grid item className={classes.stats} xs={6} sm={4}>
               <ReactPlaceholder showLoadingAnimation type="rect" ready={loaded} style={{ width: 25, height: 25 }}>
@@ -161,7 +161,7 @@ class Top extends Component {
                   {contentCreator.wage} ETH per month
                 </Typography>
               </ReactPlaceholder>
-              { loaded == false && <span>ETH per month</span> }
+              { loaded === false && <span>ETH per month</span> }
             </Grid>
             <Grid item className={classes.stats} xs={12} sm={4}>
               <Button component={Link} to={`/be-mecenas/${contentCreator.nickname}`} variant="contained" color="secondary" size="large" className={classNames(classes.button, classes.supportButton)}>Be a Mecenas</Button>

@@ -26,7 +26,7 @@ class PureTier extends PureComponent {
   render() {
     const { classes, tier, index, currentTier, action } = this.props;
     const { title, price, description} = tier;
-    const isActive = currentTier == index;
+    const isActive = currentTier === index;
     return (
       <Paper className={classes.tier} onClick={this.clickHandler} elevation={1} style={isActive ? {border: "1px solid orange"} : {}}>
         <FormControlLabel checked={isActive} control={<Radio />} label={title} />

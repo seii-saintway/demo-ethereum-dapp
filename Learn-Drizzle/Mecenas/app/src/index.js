@@ -29,7 +29,7 @@ const drizzle = new Drizzle(drizzleOptions, drizzleStore);
 
 ReactDOM.render((
   <DrizzleContext.Provider drizzle={drizzle}>
-    <Router basename={`$ {process.env.PUBLIC_URL}`}>
+    <Router basename=''>
       <App>
         <Switch>
           <Route exact path='/' component={Home} />

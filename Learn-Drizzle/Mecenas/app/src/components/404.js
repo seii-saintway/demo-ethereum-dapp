@@ -10,7 +10,7 @@ export default class Error404 extends Component {
           <Typography variant="display4">Not found</Typography>
           <Typography variant="display4" color="secondary" style={{marginLeft: 50}}>¯\_(ツ)_/¯</Typography>
         </Grid>
-        <Typography variant="subheading" style={{marginTop: 40}}>The resourse you tried to load is not found. If you find something is broken, reach me at <a target="_blank" href="https://github.com/kartojal" style={{color: "orange"}}>github.com/kartojal</a></Typography>
+        <Typography variant="subheading" style={{marginTop: 40}}>The resourse you tried to load is not found. If you find something is broken, reach me at <a href="https://github.com/seii-saintway" style={{color: "orange"}}>github.com/seii-saintway</a></Typography>
       </main>
     )
   }

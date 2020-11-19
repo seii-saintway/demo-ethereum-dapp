@@ -29,6 +29,7 @@ class DrawerMenu extends Component {
   }
   render() {
     const { classes, open } = this.props;
+    const saintway = '/0x9cc9326c7520C79FF402F32F067Df6CffABbb3c7';
     const sideList = (
       <div className={classes.list}>
         <List component="nav">
@@ -38,7 +39,7 @@ class DrawerMenu extends Component {
             </ListItemIcon>
             <ListItemText primary="Create your profile" />
           </ListItem>
-          <ListItem button component={Link} to="/kartojal" >
+          <ListItem button component={Link} to={saintway}>
             <ListItemIcon>
               <Favorite/>
             </ListItemIcon>

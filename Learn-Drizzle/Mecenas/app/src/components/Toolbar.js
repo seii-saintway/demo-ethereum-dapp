@@ -61,6 +61,7 @@ class MecenasToolbar extends Component {
   render() {
     const { classes } = this.props;
     const { openDrawer } = this.state;
+    const saintway = '/0x9cc9326c7520C79FF402F32F067Df6CffABbb3c7';
     return (
         <AppBar position="static" className={classes.appToolbar}>
           <DrawerMenu open={openDrawer} onDisableDrawer={this.handleDrawerClose}/>
@@ -78,7 +79,7 @@ class MecenasToolbar extends Component {
                 <h3 style={{color: "black"}}>Mecenas</h3>
               </Link>
             </Typography>
-            <Button component={Link} to="/kartojal" variant="flat" classes={{label: classes.devButtonLabel}} className={classNames(classes.button, classes.devButton)}>
+            <Button component={Link} to={saintway} variant="flat" classes={{label: classes.devButtonLabel}} className={classNames(classes.button, classes.devButton)}>
               Support the dev
               <Favorite color="error" style={{marginLeft: 5}}/>
             </Button>

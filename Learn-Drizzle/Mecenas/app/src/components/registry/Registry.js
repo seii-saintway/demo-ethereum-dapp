@@ -124,17 +124,17 @@ class Registry extends Component {
       const value = event.target.value;
 
       this.setState({ [field]: value});
-      if (field == "nickname") {
+      if (field === "nickname") {
         this.setState({nicknameError: ""})
         const {drizzle, drizzleState} = this.props;
         try {
           const isNewNickname = await drizzle.contracts.Mecenas.methods.contentCreatorAddresses(drizzle.web3.utils.utf8ToHex(value)).call()
-          if (isNewNickname != "0x0000000000000000000000000000000000000000") {
+          if (isNewNickname !== "0x0000000000000000000000000000000000000000") {
             this.setState({nicknameError: "Nickname is being currently used. Try another nickname."})
           }
           if (drizzleState.accounts[0]) {
             const isAddressUnique = await drizzle.contracts.Mecenas.methods.contentCreators(drizzleState.accounts[0]).call()
-            if (isAddressUnique && isAddressUnique.payday != 0) {
+            if (isAddressUnique && isAddressUnique.payday !== 0) {
               this.setState({nicknameError: "Your Ethereum address is being currently used."})
             }
           }
@@ -161,16 +161,16 @@ class Registry extends Component {
       if (drizzleState.transactions[txHash]) {
         transactionStatus = Helpers.capitalize(drizzleState.transactions[txHash].status);
       }
-      if (transactionStatus == "Error") {
+      if (transactionStatus === "Error") {
         transactionError = parseDrizzleError(drizzleState.transactions[txHash].error.message);
       }
-      if (transactionStatus == "Success") {
+      if (transactionStatus === "Success") {
         return <Redirect to={`/${this.state.nickname}`}/>
       }
     }
     const metamaskIsLocked = Object.keys(drizzleState.accounts).length === 0;
-    const anyError = !nickname.length || !description.length || isNickTooLarge || metamaskIsLocked || nicknameError.length > 0;
     const isNickTooLarge = byteLength(this.state.nickname) > 32;
+    const anyError = !nickname.length || !description.length || isNickTooLarge || metamaskIsLocked || nicknameError.length > 0;
     return (
       <div className={classes.registry}>
         <h1 className={classes.title}>Create your profile</h1>

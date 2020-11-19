@@ -74,13 +74,13 @@ class ContentCreator extends PureComponent {
     if (Object.keys(drizzleState.accounts).length === 0) {
       return (
         <div style={{padding: "140px 0px", display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
-          <img src={MetamaskLogoPath} className={classes.meta}/>
+          <img src={MetamaskLogoPath} alt="MetaMask" className={classes.meta}/>
           <Typography variant="display1" align="center">Please unlock Metamask to show contract data and load content creator.</Typography>
         </div>
       )
     }
     // If Drizzle founds an error while loading content creator, render 404 not found component.
-    if (contentCreatorExists == "not_found") {
+    if (contentCreatorExists === "not_found") {
       return (<Error404 />);
     }
 

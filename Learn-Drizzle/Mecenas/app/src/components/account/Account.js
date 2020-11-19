@@ -54,7 +54,7 @@ class AccountData extends Component {
     const {drizzle, accountIndex, drizzleState} = nextProps
     const { accounts } = drizzleState; 
     const newAddress = accounts[nextProps.accountIndex]
-    if (newAddress && selectedAddress != newAddress) {
+    if (newAddress && selectedAddress !== newAddress) {
       const tokenBalancePointer = drizzle.contracts.BadgesLedger.methods.balanceOf.cacheCall(newAddress);
       this.setState({
         selectedAddress: newAddress,

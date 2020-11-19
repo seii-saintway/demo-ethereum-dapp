@@ -147,7 +147,7 @@ class BeMecenas extends Component {
     if (Object.keys(drizzleState.accounts).length === 0) {
       return (
         <div style={{padding: "140px 0px", display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
-          <img src={MetamaskLogoPath} className={classes.meta}/>
+          <img src={MetamaskLogoPath} alt="MetaMask" className={classes.meta}/>
           <Typography variant="display1" align="center">Please unlock Metamask to show contract data and be able to support the content creators.</Typography>
         </div>
       )
@@ -169,30 +169,30 @@ class BeMecenas extends Component {
               </Stepper>
               
               {
-                activeStep == 0 && (
+                activeStep === 0 && (
                   <SelectTier defaultIndex={defaultIndex} address={address} setTier={this.selectTier} setCustomPledge={this.selectCustomPledge} currentTier={tier} customPledge={customPledge}/>
                 )
               }
               {
-                activeStep == 1 && (
+                activeStep === 1 && (
                   <SelectDuration action={this.selectMonths} pledge={customPledge} months={months}/>
                 )
               }
               {
-                activeStep == 2 && (
+                activeStep === 2 && (
                   <CreateMessage setName={this.setName} setMessage={this.setMessage} creator={creator} name={name} message={message}/>
                 )
               }
               {
-                activeStep == 3 && (
+                activeStep === 3 && (
                   <Subscribe tier={tier} months={months} pledge={customPledge} address={address} creator={creator} name={name} message={message}/>
                 )
               }
               <div>
-                <Button className={classes.button} disabled={activeStep == 0} variant="contained" color="primary" onClick={this.handleBack} >
+                <Button className={classes.button} disabled={activeStep === 0} variant="contained" color="primary" onClick={this.handleBack} >
                   Back
                 </Button>
-                <Button className={classes.buttonNext} disabled={activeStep == 3} variant="contained" color="primary" onClick={this.handleNext} >
+                <Button className={classes.buttonNext} disabled={activeStep === 3} variant="contained" color="primary" onClick={this.handleNext} >
                   Next
                 </Button>
               </div>

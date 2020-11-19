@@ -46,7 +46,7 @@ export default function withDrizzle (Component) {
             const storeState = drizzle.store.getState();
             const currentTime = new Date();
 
-            if (!initialized && tick == 0) {
+            if (!initialized && tick === 0) {
               this.interval = setInterval(() => this.tick(), 1000);
             }
             if (initialized) {
@@ -66,7 +66,7 @@ export default function withDrizzle (Component) {
                     This browser has no connection to the Ethereum network. Please use the Chrome/FireFox extension MetaMask, or dedicated Ethereum browsers Mist or Parity.
                   </Typography>
                   <Typography variant="body1" style={{marginTop: 60, fontSize: "1.3em"}}>
-                    Contact at github.com/kartojal if you need support or feel that there is something wrong. Thanks!
+                    Contact at github.com/seii-saintway if you need support or feel that there is something wrong. Thanks!
                   </Typography>
                 </main>
               )
@@ -84,7 +84,7 @@ export default function withDrizzle (Component) {
                 </Typography>
                 <LinearProgress color="secondary" />
                 <Typography variant="caption"  align="center" style={{marginTop: 280, fontSize: "1.3em"}}>
-                  Contact at github.com/kartojal if you need support or just want to have a talk. Thanks!
+                  Contact at github.com/seii-saintway if you need support or just want to have a talk. Thanks!
                 </Typography>
               </main>
             )

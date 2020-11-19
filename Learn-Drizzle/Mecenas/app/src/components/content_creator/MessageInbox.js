@@ -35,7 +35,7 @@ class MessageInbox extends PureComponent {
 
 
   async componentWillReceiveProps(nextProps) {
-    if (this.state.messages.length == 0) {
+    if (this.state.messages.length === 0) {
       const { classes, theme, drizzleState, drizzle, pointer, isAddress, address} = nextProps
       const drizzleMecenas = drizzle.contracts.Mecenas;
       const web3 = drizzle.web3;
@@ -51,7 +51,7 @@ class MessageInbox extends PureComponent {
         }
       );
       const filteredEvents = events.filter(m => {
-        return m.returnValues.contentCreatorAddress == address
+        return m.returnValues.contentCreatorAddress === address
       });
       if (filteredEvents.length > 0) {
         this.setState({

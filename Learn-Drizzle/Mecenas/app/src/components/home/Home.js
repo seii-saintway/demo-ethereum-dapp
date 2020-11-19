@@ -104,7 +104,6 @@ class Home extends Component {
         <div className={classes.videoWrap}>
           <Player
             ref="player"
-            autoPlay
             playsInline
             autoPlay={true}
             poster={ContentCreatorPosterPath}
@@ -117,7 +116,7 @@ class Home extends Component {
             <Shortcut clickable={false} />
             <ControlBar disabled />
           </Player>
-          <img src={EtherPath} className={classes.callToActionEther}/>
+          <img src={EtherPath} alt="ethereum" className={classes.callToActionEther}/>
           <Paper variant="raised" className={classes.callToActionTitle}> 
             <Typography variant="display1" className={classes.callToActionText}>Get Ether for your great content, from your followers.</Typography>
           </Paper>

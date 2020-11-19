@@ -24,7 +24,7 @@ class IpfsUpload extends Component {
       loading: false,
       errorMsg: ''
     }
-    this.ipfsApi = new ipfsAPI('ipfs.infura.io', 5001,{ protocol: 'https' });
+    this.ipfsApi = new ipfsAPI({ host: 'ipfs.infura.io', port: '5001', protocol: 'https' });
   }
 
   captureFile = (event) => {
@@ -72,7 +72,7 @@ class IpfsUpload extends Component {
         <input type="file" onChange={this.captureFile} />
         { added_file_hash && (
           <Grid container justify="center">
-            <a target="_blank"
+            <a target="_blank" rel="noopener noreferrer"
               href={currentUrl}>
               <Avatar src={currentUrl} className={classes.avatar} />
             </a>

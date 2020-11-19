@@ -72,7 +72,7 @@ class LatestCreators extends Component {
     if (Object.keys(drizzleState.accounts).length === 0) {
       return (
         <div style={{padding: "30px 0px", display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
-          <img src={MetamaskLogoPath} className={classes.meta}/>
+          <img src={MetamaskLogoPath} alt="MetaMask" className={classes.meta}/>
           <Typography variant="display1" align="center">Please unlock Metamask to show contract data and load the latest content creators.</Typography>
         </div>
       )
